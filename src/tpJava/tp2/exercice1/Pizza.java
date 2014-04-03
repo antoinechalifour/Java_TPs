@@ -3,7 +3,6 @@ package tpJava.tp2.exercice1;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class Pizza {
 	private EnumPates pat;
 	private EnumSauces sau;
