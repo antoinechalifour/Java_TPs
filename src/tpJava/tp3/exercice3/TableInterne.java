@@ -57,13 +57,9 @@ public class TableInterne implements Iterable<Object>{
 		@Override
 		public Object next() {
 			Object o;
-			try {
-				o = tab[cur];
-				cur++;
-				return o;
-			} catch (Exception e) {
-				return null;
-			}
+			o = tab[cur];
+			cur++;
+			return o;
 		}
 
 		@Override

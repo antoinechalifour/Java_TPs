@@ -31,7 +31,7 @@ public class TableIterator implements Iterator<Object>{
 			cur++;
 			return o;
 		} catch (Exception e) {
-			return new NoSuchElementException();
+			throw new NoSuchElementException();
 		}
 		
 	}

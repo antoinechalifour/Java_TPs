@@ -1,9 +1,6 @@
 package tpJava.tp3.exercice3;
 
 import java.util.Iterator;
-import java.util.NoSuchElementException;
-
-import tpJava.tp3.exercice3.TableInterne.TableIteratorInterne;
 
 /**
  * Implementation de la classe table en utilisant un iterator interne local à la méthode iterator().
@@ -56,13 +53,10 @@ public class TableLocale implements Iterable<Object>{
 			@Override
 			public Object next() {
 				Object o;
-				try {
-					o = tab[cur];
-					cur++;
-					return o;
-				} catch (Exception e) {
-					return new NoSuchElementException();
-				}
+				o = tab[cur];
+				cur++;
+				return o;
+
 			}
 
 			@Override
