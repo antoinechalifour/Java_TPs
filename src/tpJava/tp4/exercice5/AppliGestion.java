@@ -19,6 +19,7 @@ public class AppliGestion {
 		return clients.get(no);
 	}
 	
+	
 	public static int getClientCount(){
 		return nbClients;
 	}

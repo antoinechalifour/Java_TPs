@@ -5,6 +5,7 @@ public class Compte {
 	private int cle;
 	private float montant;
 	
+	
 	public Compte() {
 		super();
 		code = new CodeCompte();

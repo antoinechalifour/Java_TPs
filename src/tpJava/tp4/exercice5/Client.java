@@ -14,6 +14,7 @@ public class Client {
 		comptes = new ArrayList<Compte>();
 	}
 
+	
 	/* ACCES / MODIFICATIONS DES INFOS */
 	public String getNom() {
 		return nom;
