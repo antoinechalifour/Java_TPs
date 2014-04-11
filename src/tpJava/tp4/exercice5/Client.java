@@ -9,12 +9,12 @@ public class Client {
 	private List<Compte> comptes;
 	
 	public Client(String nom, String prenom) {
-		super();
 		this.nom = nom;
 		this.prenom = prenom;
 		comptes = new ArrayList<Compte>();
 	}
 
+	/* ACCES / MODIFICATIONS DES INFOS */
 	public String getNom() {
 		return nom;
 	}
@@ -26,6 +26,35 @@ public class Client {
 	}
 	public void setPrenom(String prenom) {
 		this.prenom = prenom;
+	}
+	
+	/* CREATION / SUPPRESSION DE COMPTES */
+	public void addCompte(){
+		Compte tmp = new Compte();
+		comptes.add(tmp);
+	}
+	
+	public void removeCompte(int no){
+		comptes.remove(no);
+	}
+	
+	/* ACCES A UN / PLUSIEURS COMPTES */
+	public void listerComptes() throws Exception{
+		if(comptes.isEmpty()) throw new Exception("Aucun compte n'a été ajouté.");
+		
+		int i=0;
+		for(Compte c : comptes){
+			System.out.println(i + ". " + c.getCode() + " : " + c.getMontant());
+			i++;
+		}
+	}
+	
+	public Compte getCompte(int no){
+		return comptes.get(no);
+	}
+	
+	public int getNbComptes(){
+		return comptes.size();
 	}
 	
 	@Override

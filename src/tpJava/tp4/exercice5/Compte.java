@@ -12,6 +12,30 @@ public class Compte {
 		this.montant = 0;
 	}
 	
+	public CodeCompte getCode() {
+		return code;
+	}
+
+	public void setCode(CodeCompte code) {
+		this.code = code;
+	}
+
+	public int getCle() {
+		return cle;
+	}
+
+	public void setCle(int cle) {
+		this.cle = cle;
+	}
+
+	public float getMontant() {
+		return montant;
+	}
+
+	public void setMontant(float montant) {
+		this.montant = montant;
+	}
+
 	public void crediter(float m){
 		montant+=m;
 	}
@@ -23,5 +47,10 @@ public class Compte {
 	public void virement(float m, Compte c){
 		montant-=m;
 		c.montant +=m;
+	}
+
+	@Override
+	public String toString() {
+		return "Compte [code=" + code + ", montant=" + montant + "]";
 	}
 }

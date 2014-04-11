@@ -17,4 +17,9 @@ public class CodeCompte {
 	public int getNumero() {
 		return numero;
 	}
+
+	@Override
+	public String toString() {
+		return "CodeCompte [numero=" + numero + "]";
+	}
 }
