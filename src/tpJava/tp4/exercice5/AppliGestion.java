@@ -153,11 +153,13 @@ public class AppliGestion {
 		BufferedWriter bw = new BufferedWriter(fw);
 		
 		for(Client p : clients){
-			bw.write("|---------- " + p.getNom() + " " + p.getPrenom() + " ----------|\n");
+			bw.write("|---------- " + p.getNom() + " " + p.getPrenom() + " ----------");
+			bw.newLine();
 			for(int i=0 ; i<p.getNbComptes() ; i++){
-				bw.write(i + ". " + p.getCompte(i) + "\n");
+				bw.write(i + ". " + p.getCompte(i));
+				bw.newLine();
 			}
-			bw.write("\n\n");
+			bw.newLine();
 		}
 		
 		bw.close();
